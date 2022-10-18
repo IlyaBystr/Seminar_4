@@ -29,6 +29,7 @@ else
 }
 */
 
+
 /*Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
 452 -> 11
@@ -37,25 +38,54 @@ else
 
 9012 -> 12
 */
-
+/*
 Console.WriteLine("Введите число");
 int A = int.Parse(Console.ReadLine()!);
-int len= NumberLen(A);
+int len = NumberLen(A);
 Console.WriteLine($"Сумма чисел чисал {A} равна = {SumNumber(A, len)}");
 
-int NumberLen(int l){
-    int ind=0;
-    while(l>0){
-        l/=10;
+int NumberLen(int L)
+{
+    int ind = 0;
+    while (L > 0)
+    {
+        L /= 10;
         ind++;
     }
     return ind;
 }
 
-int SumNumber(int a, int len){
-    int sum=0;
-    for (int i=1; i<=len; i++){
-        sum+=a%10;
+int SumNumber(int a, int len)
+{
+    int sum = 0;
+    for (int i = 1; i <= len; i++)
+    {
+        sum += a % 10;
     }
     return sum;
+}
+*/
+
+/*
+Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+
+6, 1, 33 -> [6, 1, 33]
+*/
+
+
+int[] arr = new int[8];
+FillArray(arr.Length);
+Console.Write("[");
+Console.Write(String.Join("|",arr));
+Console.WriteLine("]");
+void FillArray(int size)
+{
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = new Random().Next(1, 9);
+    }
+
 }
